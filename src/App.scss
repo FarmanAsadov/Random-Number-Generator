@@ -1,0 +1,92 @@
+@import "./style/mixins.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-up {
+    width: 30%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 10px 0 #afafaf;
+    border-radius: 5px;
+    padding: 15px;
+
+    @include mobile {
+      width: 90%;
+      height: 40%;
+    }
+
+    &-range {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 25px;
+
+      &-title {
+        font-size: 50px;
+
+        @include mobile {
+          font-size: 70px;
+        }
+      }
+
+      &-buttons {
+        display: flex;
+        column-gap: 20px;
+
+        @include mobile {
+          flex-direction: column;
+          row-gap: 20px;
+        }
+      }
+
+      .button {
+        width: 100px;
+        height: 40px;
+        background-color: #f0f0f0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        @include mobile {
+          width: 200px;
+          height: 50px;
+        }
+
+        &:hover {
+          background-color: #e0e0e0;
+        }
+      }
+
+      &-reset {
+        background-color: transparent;
+        border: none;
+
+        &-image {
+          width: 35px;
+          height: 35px;
+          cursor: pointer;
+          transition: 0.5s;
+
+          &:hover {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+  }
+}
