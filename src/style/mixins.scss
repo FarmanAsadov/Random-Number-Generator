@@ -1,5 +1,6 @@
 @import "./variables.scss";
 
+// Mixins
 @mixin lg {
   @media (max-width: #{$extra_large}) {
     @content;
